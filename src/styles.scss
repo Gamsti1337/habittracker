@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, span {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 20px;
+}
+
+.main {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+}
+
+.entry {
+    display: flex;
+    justify-content: space-between;
+    width: 140px;
+    height: 24px;
+}
