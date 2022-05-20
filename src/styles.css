@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap");
+#transparentbutton {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -26,5 +35,9 @@ h1, h2, h3, h4, h5, h6, p, span {
           justify-content: space-between;
   width: 140px;
   height: 24px;
+}
+
+.footer {
+  bottom: 0vh;
 }
 /*# sourceMappingURL=styles.css.map */
