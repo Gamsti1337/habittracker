@@ -38,8 +38,8 @@ h1,h2,h3, h4, h5, h6, p, span {
 }
 
 .entry {
-    /*display: flex;
-    justify-content: space-between;*/
+    display: flex;
+    justify-content: space-between;
     width: 200px;
     height: 24px;
 }
@@ -58,5 +58,16 @@ h1,h2,h3, h4, h5, h6, p, span {
         height: 80vh;
         top: 10%;
         right: 25%;
+    }
+}
+
+.Journaling {
+    .save-btx {
+        position: absolute;
+        border: none;
+        outline: none;
+        top: 90.2%;
+        right: 25%;
+        width: 48px;
     }
 }

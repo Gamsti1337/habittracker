@@ -17,14 +17,7 @@ button {
   padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span {
+h1, h2, h3, h4, h5, h6, p, span {
   font-family: 'Roboto Flex', sans-serif;
   font-size: 20px;
 }
@@ -63,7 +56,12 @@ span {
   right: 25%;
 }
 
-.journaling button {
-  background-color: red;
+.Journaling .save-btx {
+  position: absolute;
+  border: none;
+  outline: none;
+  top: 90.2%;
+  right: 25%;
+  width: 48px;
 }
 /*# sourceMappingURL=styles.css.map */

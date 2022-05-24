@@ -2,7 +2,6 @@ import * as React from 'react'
 import './styles.css'
 
 /* 
-TODO: make <h3>{props.textcontent}</h3> work
 TODO: make Investing and Learning page        
 */
 
@@ -30,14 +29,19 @@ const Learning = () => { //TODO
 }
 
 const Journaling = () => {
-  window.addEventListener("input", (e) => {
-    const element = e.target as HTMLInputElement
-    const value = element!.value
-    console.log(value)
-  })
+  function saving() {
+    window.addEventListener("input", (e) => {
+    const element = e.target as HTMLInputElement //im actually braindead
+    const value = element.value
+    /* backend
+    const express = require('express')
+     */
+    }) 
+  }
   return(
     <div className="paper">
       <textarea className="paperpage" placeholder="Start typing what is in your mind"></textarea>
+      <button className="save-btx" onClick={event => saving()}>Save</button>
     </div>  
   )
 }
@@ -52,7 +56,6 @@ function App() {
         </div>
         <div className="Journaling">
           <Entries textcontent="Journaling" emojiname="bx bx-book-alt bx-sm"/>
-          <button>Save</button>
           <Journaling/>
         </div>
         <div className="Learning">
@@ -63,5 +66,5 @@ function App() {
     </div>
   )
 }
-
+// now i need to connect this button to the backend
 export default App
