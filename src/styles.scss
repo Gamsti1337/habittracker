@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+
+$light-Gray: #3e3e3e;
 @mixin transparentbutton {
     background-color: transparent;
     background-repeat: no-repeat;
@@ -12,17 +14,22 @@
     @include transparentbutton();
 }
 
+button {
+    cursor: pointer;
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p, span {
+h1,h2,h3, h4, h5, h6, p, span {
     font-family: 'Roboto Flex', sans-serif;
     font-size: 20px;
 }
 
 .main {
+    background-color: $light-Gray;
     position: absolute;
     top: 0%;
     left: 0%;
@@ -33,10 +40,29 @@ h1, h2, h3, h4, h5, h6, p, span {
 .entry {
     display: flex;
     justify-content: space-between;
-    width: 140px;
+    width: 200px;
     height: 24px;
 }
 
-.footer {
-    bottom: 0vh;
+.leftbar {
+    width: 200px;
+    height: 100vh;
+}
+
+
+.paper {
+    textarea {
+        position: absolute;
+        resize: none;
+        width: 50vw;
+        height: 80vh;
+        top: 10%;
+        right: 25%;
+    }
+}
+
+.journaling { 
+    button {
+        background-color: red;
+    }
 }

@@ -8,17 +8,29 @@
   outline: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p, span {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
   font-family: 'Roboto Flex', sans-serif;
   font-size: 20px;
 }
 
 .main {
+  background-color: #3e3e3e;
   position: absolute;
   top: 0%;
   left: 0%;
@@ -33,11 +45,25 @@ h1, h2, h3, h4, h5, h6, p, span {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 140px;
+  width: 200px;
   height: 24px;
 }
 
-.footer {
-  bottom: 0vh;
+.leftbar {
+  width: 200px;
+  height: 100vh;
+}
+
+.paper textarea {
+  position: absolute;
+  resize: none;
+  width: 50vw;
+  height: 80vh;
+  top: 10%;
+  right: 25%;
+}
+
+.journaling button {
+  background-color: red;
 }
 /*# sourceMappingURL=styles.css.map */
