@@ -1,17 +1,18 @@
+import * as React from 'react'
 import './styles.css'
-import 'boxicons'
 
 /* 
 TODO: make <h3>{props.textcontent}</h3> work
-TODO: make Investing and Learning page
+TODO: make Investing and Learning page        
 */
 
-function Entries(props) {
+function Entries(props: any) {
   return (
     <div className="entry">
       <button id="transparentbutton" onClick={props.event}>
-        <box-icon name={props.emojiname} type={props.type}></box-icon>
+        <i className={props.emojiname}></i>
       </button>
+      <h3>{props.textcontent}</h3>
     </div>
   )
 }
@@ -46,16 +47,16 @@ function App() {
     <div className='main'>
       <div className="leftbar">
         <div className="Investing">
-          <Entries textcontent="Investing" emojiname="money-withdraw"/>
+          <Entries textcontent="Investing" emojiname="bx bx-money-withdraw bx-sm"/>
           <Investing/>
         </div>
         <div className="Journaling">
-          <Entries textcontent="Journaling" emojiname="book-alt" event={event => console.log('Cheese')}/>
+          <Entries textcontent="Journaling" emojiname="bx bx-book-alt bx-sm"/>
           <button>Save</button>
           <Journaling/>
         </div>
         <div className="Learning">
-          <Entries textcontent="Learning" emojiname="graduation" type="solid"/>
+          <Entries textcontent="Learning" emojiname="bx bxs-graduation bx-sm"/>
           <Learning/>
         </div>
       </div>

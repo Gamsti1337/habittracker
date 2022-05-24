@@ -38,8 +38,8 @@ h1,h2,h3, h4, h5, h6, p, span {
 }
 
 .entry {
-    display: flex;
-    justify-content: space-between;
+    /*display: flex;
+    justify-content: space-between;*/
     width: 200px;
     height: 24px;
 }
@@ -58,11 +58,5 @@ h1,h2,h3, h4, h5, h6, p, span {
         height: 80vh;
         top: 10%;
         right: 25%;
-    }
-}
-
-.journaling { 
-    button {
-        background-color: red;
     }
 }
