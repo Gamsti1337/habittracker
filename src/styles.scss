@@ -1,17 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
 
-$light-Gray: #3e3e3e;
-@mixin transparentbutton {
+#transparentbutton {
     background-color: transparent;
     background-repeat: no-repeat;
     border: none;
-    cursor: pointer;
     overflow: hidden;
     outline: none;
-}
-
-#transparentbutton {
-    @include transparentbutton();
 }
 
 button {
@@ -23,18 +17,9 @@ button {
     padding: 0;
 }
 
-h1,h2,h3, h4, h5, h6, p, span {
+h1, h2, h3, h4, h5, h6, p, span {
     font-family: 'Roboto Flex', sans-serif;
     font-size: 20px;
-}
-
-.main {
-    background-color: $light-Gray;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 100vw;
-    height: 100vh;
 }
 
 .entry {
@@ -42,6 +27,9 @@ h1,h2,h3, h4, h5, h6, p, span {
     justify-content: space-between;
     width: 200px;
     height: 24px;
+    h3 {
+        margin-right: 75px;
+    }
 }
 
 .leftbar {
@@ -69,5 +57,32 @@ h1,h2,h3, h4, h5, h6, p, span {
         top: 90.2%;
         right: 25%;
         width: 48px;
+    }
+}
+
+#hide {
+    display: none;
+}
+
+.Investing :not(.entry) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .number {
+        font-size: small;
+    }
+    .investing-btx, input {
+        border: none;
+        outline: none;
+    }
+    input {
+        background-color: #4f4f4f;
+    }
+    .investing-btx {
+        button {
+            width: 96px;
+            text-align: center;
+        }
+        width: 180px; /*make buttons small*/
     }
 }
