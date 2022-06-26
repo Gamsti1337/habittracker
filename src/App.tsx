@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import "./styles.css"
+import "./styles.scss"
 
 function Entries (props: any) {
   return (
@@ -23,10 +23,6 @@ const Investing = (props: any) => { // TODO
     <div className="Investing" id={props.id}>
       <h1 className="number">{number}</h1>
       <input type="text"></input>
-      <div className="investing-btx">
-        <button className="addTable" onClick={increase}>Add Table</button>
-        <button className="removeTable" onClick={decrease}>Remove Table</button>
-      </div>
     </div>
   )
 }
@@ -49,6 +45,13 @@ const Journaling = (props: any) => {
   )
 }
 function App () {
+  const [number, setNumber] = useState(0)
+  function increase () {
+    if (number < 100) { setNumber(number + 1) } // tables are 1vh, so the browser can fit just 100
+  }
+  function decrease () {
+    if (number > 0) { setNumber(number - 1) } // if there are more than 0 tables, tables will get removed
+  }
   const [show, setShow] = useState(false) // NOT clean code (working on cleaning this atrocity)
   const [show1, setShow1] = useState(false) // NOT clean code (working on cleaning this atrocity)
   const [show2, setShow2] = useState(false) // NOT clean code (working on cleaning this atrocity)
@@ -58,6 +61,10 @@ function App () {
         <div className="Investing">
           <Entries textcontent="Investing" emojiname="bx bx-money-withdraw bx-sm" event={() => setShow((s) => !s)}/>
           <Investing id={`${show ? "show" : "hide"}`}/>
+          <div className="investing-btx">
+            <button className="addTable" onClick={increase}>Add Table</button>
+            <button className="removeTable" onClick={decrease}>Remove Table</button>
+          </div>
         </div>
         <div className="Journaling">
           <Entries textcontent="Journaling" emojiname="bx bx-book-alt bx-sm" event={() => setShow1((s) => !s)}/>
